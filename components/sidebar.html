@@ -10,42 +10,57 @@
     <link rel="stylesheet" href="../css/layout.css" />
   </head>
   <body>
-    <aside class="sidebar">
-      <a href="#" class="close-btn">
-        <img src="../img/close-btn.png" alt="" />
-      </a>
-      <hr />
-      <ul class="menu">
-        <li class="menu-item dashboard active">
-          <img src="../img/dashboard-icon.png" alt="" />
-          <span>Dashboard</span>
-        </li>
-        <li class="menu-item penghuni">
-          <img src="../img/penghuni-icon.png" alt="" />
-          <span>Penghuni</span>
-        </li>
-        <li class="menu-item kamar">
-          <img src="../img/kamar-icon.png" alt="" />
-          <span>Kamar</span>
-        </li>
-        <li class="menu-item pembayaran">
-          <img src="../img/pembayaran-icon.png" alt="" />
-          <span>Pembayaran</span>
-        </li>
-        <li class="menu-item pengaduan">
-          <img src="../img/pengaduan-icon.png" alt="" />
-          <span>Pengaduan</span>
-        </li>
-      </ul>
-      <hr />
-      <a href="/" class="logo">
-        <img src="../img/logo.png" alt="Logo" />
+    <aside class="sidebar" id="sidebar">
+      <a href="../pages/dashboard.html" class="logo list-item">
+        <img src="../img/logo.png" alt="Logo Kostku" />
       </a>
 
-      <div href="#" class="logout-btn">
-        <img src="../img/logout-icon.png" alt="" />
-        <span>Logout</span>
-      </div>
+      <hr class="line-1" />
+      <ul class="menu">
+        <li class="list-item dashboard">
+          <a href="../pages/dashboard.html" class="menu-item">
+            <img src="../img/dashboard-icon.png" />
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <li class="list-item penghuni">
+          <a href="../pages/penghuni.html" class="menu-item">
+            <img src="../img/penghuni-icon.png" />
+            <span>Penghuni</span>
+          </a>
+        </li>
+
+        <li class="list-item kamar">
+          <a href="../pages/kamar.html" class="menu-item">
+            <img src="../img/kamar-icon.png" />
+            <span>Kamar</span>
+          </a>
+        </li>
+
+        <li class="list-item pembayaran">
+          <a href="../pages/pembayaran.html" class="menu-item">
+            <img src="../img/pembayaran-icon.png" />
+            <span>Pembayaran</span>
+          </a>
+        </li>
+
+        <li class="list-item pengaduan">
+          <a href="../pages/pengaduan.html" class="menu-item">
+            <img src="../img/pengaduan-icon.png" />
+            <span>Pengaduan</span>
+          </a>
+        </li>
+      </ul>
+      <hr class="line-2" />
+
+      <a href="../login.html" class="menu-item"
+        ><div class="logout-btn list-item">
+          <img src="../img/logout-icon.png" alt="Logo Logout" />
+          <span>Logout</span>
+        </div></a
+      >
     </aside>
+    <script src="../js/main.js" defer></script>
   </body>
 </html>
