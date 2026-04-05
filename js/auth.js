@@ -1,17 +1,24 @@
+// TOGGLE PASSWORD
+
+// ambil elemen icon mata & input password
 const togglePassword = document.getElementById("togglePassword");
 const password = document.getElementById("password");
 
-togglePassword.addEventListener("click", function() {
-    // cek tipe inputan
-    const type = password.getAttribute("type") === "password" ? "text" : "password";
-    password.setAttribute("type", type);
+// cek kalau elemennya ada (biar ga error di halaman lain)
+if (togglePassword && password) {
 
-    // ganti icon
-    if (type === "text") {
-        this.src = "img/eye-open.png";
-    } else {
-        this.src = "img/eye-close.png";
-    }
-})
+    // ketika icon diklik
+    togglePassword.addEventListener("click", function() {
 
-console.log(this.src)
+        // cek tipe password sekarang (password / text)
+        const type = password.type === "password" ? "text" : "password";
+
+        // ubah tipe input
+        password.type = type;
+
+        // ganti icon sesuai kondisi
+        this.src = type === "text" ?
+            "img/eye-open.png" :
+            "img/eye-close.png";
+    });
+}

@@ -31,7 +31,7 @@
                 >Kelola data penghuni dan akun login</span
               >
             </div>
-            <button class="btn btn-primary" id="addKamarBtn">
+            <button class="btn btn-primary" id="addPenghuniBtn">
               Tambah Penghuni
             </button>
           </header>
@@ -135,13 +135,13 @@
           </div>
 
           <!-- MODAL TAMBAH PENGHUNI -->
-    <div id="modal-TambahKamar" class="modal" style="display: none;">
+    <div id="modalTambahPenghuni" class="modal" style="display: none;">
       <div class="modal-header">
         <h2>Tambah Penghuni</h2>
         <button class="close-btn">&times;</button>
       </div>
 
-      <form class="form-tambah-penghuni">
+      <form class="form-tambah-Penghuni">
         <div class="form-group">
           <label>Nama</label>
           <input type="text" class="form-control" placeholder="Masukkan nama lengkap" required>
@@ -195,7 +195,7 @@
         <input type="text" class="form-control" placeholder="Masukkan username" required>
       </div>
 
-      <div class="form-group password-group">
+      <div class="form-group">
   <label>Password</label>
 
   <div class="password-wrapper">
@@ -203,12 +203,13 @@
       type="password"
       class="form-control"
       id="passwordPenghuni"
-      placeholder="Masukkan password" required
+      placeholder="Masukkan password"
+      required
     />
 
     <img
       src="../img/eye-close.png"
-      class="toggle-password-penghuni"
+      class="toggle-password"
       id="togglePasswordPenghuni"
       alt="toggle password"
     />
@@ -230,7 +231,7 @@
     <div id="successOverlay" class="overlay-modal" style="display: none;">
       <div class="success-box">
         <div class="icon">✓</div>
-        <p>Kamar berhasil ditambahkan</p>
+        <p>Penghuni berhasil ditambahkan</p>
       </div>
     </div>
 
@@ -273,26 +274,35 @@
       </div>
 
       <div class="form-group">
-        <label>Password</label>
-        <input type="password" class="form-control right" id="detail-password" readonly>
-        <img 
-      src="../img/eye-close.png" 
+  <label>Password</label>
+
+  <div class="password-wrapper">
+    <input
+      type="password"
+      class="form-control right"
+      id="detail-password"
+      readonly
+    />
+
+    <img
+      src="../img/eye-close.png"
       class="toggle-password"
       id="togglePassword"
       alt="toggle password"
-    >
-      </div>
+    />
+  </div>
+</div>
       </div>
     </form>
 
     <div class="modal-footer-detail full">
-        <button type="button" class="btn btn-cancel btn-detail-close">Tutup</button>
+        <button type="button" class="btn btn-detail-close">Tutup</button>
       </div>
 
   </div>
 
     <!-- MODAL EDIT PENGHUNI -->
-<div id="modalEditKamar" class="modal" style="display:none;">
+<div id="modalEditPenghuni" class="modal" style="display:none;">
 
   <div class="modal-header">
     <h2>Edit Penghuni</h2>
@@ -334,23 +344,24 @@
       </div>
 
       <div class="form-group">
+  <label>Password</label>
 
-        <label>Password</label>
+  <div class="password-wrapper">
+    <input
+      type="password"
+      class="form-control right"
+      id="edit-password"
+      required
+    />
 
-        <input 
-          type="password" 
-          class="form-control right" 
-          id="edit-password" 
-          required
-        >
-
-        <img
-          src="../img/eye-close.png"
-          class="toggle-password-edit"
-          id="togglePasswordEdit"
-        >
-
-      </div>
+    <img
+      src="../img/eye-close.png"
+      class="toggle-password"
+      id="togglePasswordEdit"
+      alt="toggle password"
+    />
+  </div>
+</div>
 
     </div>
   </form>
@@ -361,8 +372,8 @@
 
 </div>
 
-   <!-- MODAL DELETE KAMAR -->
-<div id="modalDeleteKamar" class="modal modal-delete" style="display: none;">
+   <!-- MODAL DELETE PENGHUNI -->
+<div id="modalDeletePenghuni" class="modal-delete" style="display: none;">
   <div class="modal-header">
     <h2>Konfirmasi Hapus</h2>
     <button class="close-btn">&times;</button>
@@ -386,7 +397,7 @@
     <div id="successOverlayEdit" class="overlay-modal" style="display: none;">
       <div class="success-box">
         <div class="icon">✓</div>
-        <p>Kamar berhasil diedit</p>
+        <p>Penghuni berhasil diedit</p>
       </div>
     </div>
 
@@ -394,7 +405,7 @@
     <div id="successOverlayDelete" class="overlay-modal" style="display: none;">
       <div class="success-box">
         <div class="icon">✓</div>
-        <p>Kamar berhasil dihapus</p>
+        <p>Penghuni berhasil dihapus</p>
       </div>
     </div>
         <!-- SCRIPT -->
