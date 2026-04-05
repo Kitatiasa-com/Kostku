@@ -231,3 +231,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000);
   });
 });
+
+// PENGADUAN PENGHUNI
+document.addEventListener('DOMContentLoaded', () => {
+  const formPengaduan = document.getElementById('formPengaduan');
+  const successOverlay = document.getElementById('successOverlayPengaduan');
+
+  // Fungsi untuk mengatur tampilan (Sembunyi/Muncul)
+  const toggleSuccess = (show = false) => {
+    if (successOverlay) {
+      successOverlay.style.display = show ? 'flex' : 'none';
+    }
+  };
+
+  // Handle Pengiriman Form
+  if (formPengaduan) {
+    formPengaduan.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // 1. Simulasi proses kirim (bisa ditambah Fetch/AJAX di sini)
+      console.log("Mengirim pengaduan...");
+
+      // 2. Munculkan overlay sukses
+      toggleSuccess(true);
+
+      // 3. Reset form dan tutup overlay setelah 2 detik
+      setTimeout(() => {
+        toggleSuccess(false);
+        formPengaduan.reset(); // Mengosongkan input & textarea
+      }, 2000);
+    });
+  }
+
+  // Event tambahan: Tutup overlay jika area hitam diklik (optional)
+  successOverlay?.addEventListener('click', () => toggleSuccess(false));
+});
