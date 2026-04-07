@@ -5,37 +5,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kostku - Dashboard</title>
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/page.css" />
+    <link rel="stylesheet" href="../css/table.css" />
+    <link rel="stylesheet" href="../css/form.css" />
+
 </head>
 
 <body>
     <div class="main">
         <!-- SIDEBAR -->
-        <div id="sidebar"></div>
+        <div id="sidebar-penghuni"></div>
         <div id="overlay" class="overlay"></div>
 
         <div class="main-content">
             <!-- TOPBAR -->
-            <div id="topbar"></div>
+            <div id="topbar-penghuni"></div>
 
             <!-- DASHBOARD PAGE -->
             <main class="page dashboard" id="content">
-                <!-- HEADER PAGE -->
+
+                <!-- HEADER -->
                 <header class="page-header">
                     <div class="page-title">
                         <h1>Selamat Datang, Saifulloh Fattah</h1>
                         <span class="page-description">
-                          Berikut adalah ringkasan informasi Anda
+                            Berikut adalah ringkasan informasi Anda
                         </span>
                     </div>
                 </header>
 
-                <!-- CONTENT -->
-
-                <!-- DASHBOARD - CARDS -->
+                <!-- CARDS -->
                 <div class="dashboard-cards grid-2">
                     <div class="dashboard-card card-blue">
                         <div class="card-header">
@@ -44,6 +47,7 @@
                         <h4>Info Kamar</h4>
                         <h2>KM003</h2>
                     </div>
+
                     <div class="dashboard-card card-yellow">
                         <div class="card-header">
                             <img src="../img/dasboard-penghuni-pembayaran.png">
@@ -52,14 +56,58 @@
                         <h2>April 2026</h2>
                     </div>
                 </div>
-                <div class="table-container-penguni">
-                </div>
-            </main>
-        </div>
-    </div>
 
-    <!-- SCRIPT -->
-    <script src="../js/main.js"></script>
+                <!-- DETAIL PENGHUNI (FORM BIASA) -->
+                <!-- DETAIL PENGHUNI -->
+<div class="dp-detail-card">
+    <h2 class="dp-title">Detail Penghuni</h2>
+
+    <form class="dp-form-grid">
+
+        <!-- KIRI -->
+        <div class="dp-form-column">
+            <div class="dp-form-group">
+                <label>Nama Lengkap</label>
+                <input type="text" value="Saifulloh Fattah" readonly>
+            </div>
+
+            <div class="dp-form-group">
+                <label>No HP</label>
+                <input type="text" value="081234567890" readonly>
+            </div>
+
+            <div class="dp-form-group">
+                <label>Kamar</label>
+                <input type="text" value="KM003" readonly>
+            </div>
+
+            <div class="dp-form-group">
+                <label>Tanggal Masuk</label>
+                <input type="text" value="08/04/2026" readonly>
+            </div>
+        </div>
+
+        <!-- KANAN -->
+        <div class="dp-form-column dp-column-right">
+            <h3 class="dp-subtitle">Informasi Akun</h3>
+
+            <div class="dp-form-group">
+                <label>Username</label>
+                <input type="text" value="saiful1" readonly>
+            </div>
+
+            <div class="dp-form-group dp-password-group">
+                <label>Password</label>
+                <input type="password" value="12345678" id="passwordField" readonly>
+            </div>
+        </div>
+
+    </form>
+</div>
+        </div>
+
+        <!-- SCRIPT -->
+        <script src="../js/main.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,8 @@
 }
 
 /* SIDEBAR */
-.sidebar {
+.sidebar,
+.sidebar-penghuni {
   width: 250px;
   height: 100%;
   position: static;
@@ -25,7 +26,8 @@
 }
 
 /* TOPBAR */
-.topbar {
+.topbar,
+.topbar-penghuni {
   display: flex;
   justify-content: space-between;
   height: 75px;
@@ -35,13 +37,12 @@
   padding: 0 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.topbar .right {
+
+.topbar .right,
+.topbar-penghuni .right {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-.topbar img {
-  width: 30px;
+  gap: 15px;
 }
 
 /* BURGER BUTTON */
@@ -71,7 +72,9 @@
 
 /* SIDEBAR TABLET */
 @media (max-width: 1024px) {
-  .sidebar {
+
+  .sidebar,
+  .sidebar-penghuni {
     width: 200px;
   }
 
@@ -79,23 +82,26 @@
     display: none;
   }
 
-  .topbar {
+  .topbar,
+  .topbar-penghuni {
     font-size: 16px;
   }
-
-  .topbar img {
-    width: 28px;
-    height: 28px;
-  }
+  .topbar .right,
+.topbar-penghuni .right {
+  gap: 12px;
 }
 
-/* SIDEBAR MOBILE  */
+}
+
+/* SIDEBAR MOBILE */
 @media (max-width: 768px) {
+
   .burger-btn {
     display: block;
   }
 
-  .sidebar {
+  .sidebar,
+  .sidebar-penghuni {
     position: fixed;
     left: -260px; /* sembunyi */
     top: 0;
@@ -104,7 +110,8 @@
     transition: 0.3s;
   }
 
-  .sidebar.active {
+  .sidebar.active,
+  .sidebar-penghuni.active {
     left: 0; /* muncul */
   }
 
@@ -113,12 +120,13 @@
     visibility: visible;
   }
 
-  .topbar {
+  .topbar,
+  .topbar-penghuni {
     font-size: 12px;
   }
+    .topbar .right,
+.topbar-penghuni .right {
+  gap: 10px;
+}
 
-  .topbar img {
-    width: 25px;
-    height: 25px;
-  }
 }

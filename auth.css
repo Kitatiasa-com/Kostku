@@ -186,7 +186,7 @@ textarea {
 
 /* TABLET */
 
-@media (max-widthh: 1024px) {
+@media (max-width: 1024px) {
     body {
         padding: 30px;
     }

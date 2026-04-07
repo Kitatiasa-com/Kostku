@@ -3,6 +3,7 @@
 .page {
     padding: 20px;
     font-family: "DM Sans", sans-serif;
+    /* overflow-y: hidden; */
 }
 
 .page-header {
@@ -172,6 +173,12 @@
 .badge-terisi {
     background: #e0f7e9;
     color: #1aa34a;
+    align-items: center;
+}
+
+.badge-danger {
+    background: #FFC5BF;
+    color: #B43024;
     align-items: center;
 }
 
@@ -451,6 +458,9 @@ select.form-control {
 
 /* PENGADUAN PENGHUNI */
 /* Container Utama */
+.card-pengaduan{
+    width:full;
+}
 .pengaduan-penghuni {
   padding: 20px;
   max-width: 100%;
@@ -539,6 +549,10 @@ select.form-control {
   border-radius: 8px;
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+textarea.form-control  {
+   resize: none;
 }
 
 /* PENGADUAN PAGE */
@@ -795,9 +809,6 @@ select.form-control {
     width: 12px;
     height: 12px;
   }
-  .grid-pengaduan {
-    grid-template-columns: 1fr;
-  }
 
 /* DASHBOARD - container cards */
 
@@ -805,6 +816,19 @@ select.form-control {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
+
+.dashboard-cards {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 
@@ -815,7 +839,6 @@ select.form-control {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: auto;
     padding: 20px;
     border-radius: 8px;
     background: white;
@@ -862,14 +885,12 @@ select.form-control {
 .dashboard-card h4 {
     font-size: clamp(14px, 2vw, 19px);
     font-weight: 400;
-    line-height: 140%;
     color: black;
 }
 
 .dashboard-card h2 {
     font-size: clamp(20px, 3vw, 33px);
     font-weight: 700;
-    line-height: 140%;
 }
 
 .card-header img {
@@ -933,6 +954,71 @@ select.form-control {
     width: auto;
 }
 
+
+/* DETAIL PENGHUNI */
+
+.dp-detail-card {
+    margin-top: 20px;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dp-title {
+    margin-bottom: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 600;
+}
+
+/* GRID FORM */
+.dp-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* COLUMN */
+.dp-form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* SUB TITLE */
+.dp-column-right .dp-subtitle {
+    font-size: clamp(14px, 2vw, 16px);
+    margin-bottom: 10px;
+}
+
+/* FORM GROUP */
+.dp-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABEL */
+.dp-form-group label {
+    font-size: clamp(11px, 1.8vw, 13px);
+    margin-bottom: 4px;
+}
+
+/* INPUT */
+.dp-form-group input {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+/* READONLY */
+.dp-form-group input[readonly] {
+    background: #f5f5f5;
+    color: #333;
+    cursor: default;
+}
+
 @media (max-width: 1024px) {
     .page-title h1 {
         font-size: 24px;
@@ -960,6 +1046,13 @@ select.form-control {
     }
     .dashboard-bottom {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+  .grid-pengaduan {
+    grid-template-columns: 1fr;
+  }
+  .dp-form-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -990,6 +1083,13 @@ select.form-control {
         grid-template-columns: 1fr;
     }
     .dashboard-bottom {
+        grid-template-columns: 1fr;
+    }
+    
+  .grid-pengaduan {
+    grid-template-columns: 1fr;
+  }
+  .dp-form-grid {
         grid-template-columns: 1fr;
     }
 }

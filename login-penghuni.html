@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KOSTKU - Login Pengelola</title>
+    <title>KOSTKU - Login Penghuni</title>
     <link rel="stylesheet" href="auth.css">
 </head>
 
 <body>
     <div class="container">
 
-        <!-- PAGE KIRI -->
+        <!-- KIRI -->
         <div class="left">
             <div class="logo">
                 <img src="img/logo-auth.png">
@@ -21,30 +21,35 @@
             <img src="img/ornament-auth-penghuni.png" class="illustration">
         </div>
 
-        <!-- PAGE KANAN -->
+        <!-- KANAN -->
         <div class="form-auth">
             <div class="form-box">
                 <h2>Login Penghuni</h2>
                 <span class="page-description">Masuk ke akun Anda.</span>
                 <br>
-                <form class="form-for-auth" id="form-for-auth">
+
+                <form class="form-for-auth" id="form-for-auth" action="pages/dashboard-penghuni.html" method="get">
+
                     <div class="input-group">
                         <span>Email</span>
                         <input type="email" id="email" placeholder="Email" required>
                     </div><br>
+
                     <div class="input-group">
                         <span>Password</span>
                         <div class="password-auth">
                             <input type="password" id="password" placeholder="Password" minlength="8" required>
                             <img src="img/eye-close.png" id="togglePassword">
                         </div>
-                    </div><br>
-                    <br>
-                    <a href="pages/dashboard-penghuni.html" class="btn">Login</a>
+                    </div><br><br>
+
+                    <button type="submit" class="btn">Login</button>
+
                 </form>
             </div>
         </div>
     </div>
+
     <script src="js/auth.js"></script>
 </body>
 
